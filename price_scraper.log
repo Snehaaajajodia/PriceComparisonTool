@@ -1,0 +1,66 @@
+2025-07-07 05:15:46,729 - INFO - Searching amazon...
+2025-07-07 05:15:47,326 - INFO - Navigating to: https://www.amazon.in/s?k=MacBook+Air
+2025-07-07 05:16:22,000 - ERROR - Error searching https://www.amazon.in: Timeout 30000ms exceeded.
+=========================== logs ===========================
+"load" event fired
+============================================================
+2025-07-07 05:16:22,002 - INFO - Waiting 4.9 seconds before next site...
+2025-07-07 05:16:26,915 - INFO - Searching flipkart...
+2025-07-07 05:16:27,442 - INFO - Navigating to: https://www.flipkart.com/search?q=MacBook+Air
+2025-07-07 05:16:35,560 - INFO - Found product container selector: div._75nlfW
+2025-07-07 05:16:35,575 - INFO - Saved page HTML to flipkart_MacBook_Air.html
+2025-07-07 05:16:46,192 - INFO - Found 24 product containers on https://www.flipkart.com
+2025-07-07 05:16:46,245 - INFO - Found product: Apple MacBook Air Apple M4 - (16 GB/256 GB SSD/mac... - 95990
+2025-07-07 05:16:46,294 - INFO - Found product: Apple MacBook AIR Apple M2 - (16 GB/256 GB SSD/mac... - 85900
+2025-07-07 05:16:46,341 - INFO - Found product: Apple MacBook Air Apple M4 - (16 GB/256 GB SSD/mac... - 95990
+2025-07-07 05:16:46,406 - INFO - Waiting 4.1 seconds before next site...
+2025-07-07 05:16:50,520 - INFO - Searching myntra...
+2025-07-07 05:16:51,131 - INFO - Navigating to: https://www.myntra.com/MacBook+Air
+2025-07-07 05:16:51,385 - ERROR - Error searching https://www.myntra.com: Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.myntra.com/MacBook+Air
+Call log:
+  - navigating to "https://www.myntra.com/MacBook+Air", waiting until "domcontentloaded"
+
+2025-07-07 05:16:51,385 - INFO - Waiting 4.8 seconds before next site...
+2025-07-07 05:16:56,151 - INFO - Searching ajio...
+2025-07-07 05:16:56,728 - INFO - Navigating to: https://www.ajio.com/search/?text=MacBook+Air
+2025-07-07 05:17:07,536 - WARNING - Product container selector not found: Page.wait_for_selector: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator("div.item rilrtl-products-list__item") to be visible
+
+2025-07-07 05:17:07,539 - INFO - Saved page HTML to ajio_MacBook_Air.html
+2025-07-07 05:17:18,663 - INFO - Found 0 product containers on https://www.ajio.com
+2025-07-07 05:17:18,728 - INFO - Waiting 3.6 seconds before next site...
+2025-07-07 05:17:22,295 - INFO - Results saved to IN_MacBook_Air_results.json
+2025-07-07 05:17:22,296 - INFO - Found 3 valid results
+2025-07-07 05:18:24,345 - INFO - Searching for 'Nike Shoes' in IN
+2025-07-07 05:18:24,345 - INFO - Searching amazon...
+2025-07-07 05:18:24,855 - INFO - Navigating to: https://www.amazon.in/s?k=Nike+Shoes
+2025-07-07 05:18:56,664 - ERROR - Error searching https://www.amazon.in: Timeout 30000ms exceeded.
+=========================== logs ===========================
+"load" event fired
+============================================================
+2025-07-07 05:18:56,664 - INFO - Waiting 4.9 seconds before next site...
+2025-07-07 05:19:01,575 - INFO - Searching flipkart...
+2025-07-07 05:19:02,119 - INFO - Navigating to: https://www.flipkart.com/search?q=Nike+Shoes
+2025-07-07 05:19:09,789 - INFO - Found product container selector: div._75nlfW
+2025-07-07 05:19:09,806 - INFO - Saved page HTML to flipkart_Nike_Shoes.html
+2025-07-07 05:19:16,266 - INFO - Found 10 product containers on https://www.flipkart.com
+2025-07-07 05:19:16,377 - INFO - Waiting 3.6 seconds before next site...
+2025-07-07 05:19:19,980 - INFO - Searching myntra...
+2025-07-07 05:19:20,527 - INFO - Navigating to: https://www.myntra.com/Nike+Shoes
+2025-07-07 05:19:20,812 - ERROR - Error searching https://www.myntra.com: Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.myntra.com/Nike+Shoes
+Call log:
+  - navigating to "https://www.myntra.com/Nike+Shoes", waiting until "domcontentloaded"
+
+2025-07-07 05:19:20,812 - INFO - Waiting 4.5 seconds before next site...
+2025-07-07 05:19:25,279 - INFO - Searching ajio...
+2025-07-07 05:19:25,785 - INFO - Navigating to: https://www.ajio.com/search/?text=Nike+Shoes
+2025-07-07 05:19:36,546 - WARNING - Product container selector not found: Page.wait_for_selector: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator("div.item rilrtl-products-list__item") to be visible
+
+2025-07-07 05:19:36,565 - INFO - Saved page HTML to ajio_Nike_Shoes.html
+2025-07-07 05:19:41,843 - INFO - Found 0 product containers on https://www.ajio.com
+2025-07-07 05:19:41,906 - INFO - Waiting 4.1 seconds before next site...
+2025-07-07 05:19:46,016 - INFO - Results saved to IN_Nike_Shoes_results.json
+2025-07-07 05:19:46,017 - INFO - Found 0 valid results

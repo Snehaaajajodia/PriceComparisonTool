@@ -1,0 +1,202 @@
+ADVANCED PRICE COMPARISON SCRAPER - INSTRUCTIONS
+==================================================
+
+Created by: Sneha Jajodia
+
+DESCRIPTION:
+-----------
+This is an advanced CLI tool that scrapes multiple e-commerce websites for price comparisons
+across different countries. It uses Playwright with stealth features to avoid bot detection
+and provides comprehensive price comparison data.
+
+FEATURES:
+---------
+✅ Multi-country support (US, IN, UK, CA)
+✅ Multiple e-commerce sites per country
+✅ Stealth mode with anti-detection features
+✅ JSON file input/output support
+✅ Human-like browsing simulation
+✅ CAPTCHA detection and handling
+✅ Comprehensive logging
+✅ Price sorting and filtering
+
+DEPENDENCIES:
+-------------
+1. Python 3.8 or higher
+2. Playwright
+3. Required Python packages (install via pip):
+
+   pip install playwright
+   playwright install chromium
+
+INSTALLATION STEPS:
+-------------------
+1. Ensure Python 3.8+ is installed on your system
+2. Open terminal/command prompt in the project directory
+3. Install Playwright:
+   pip install playwright
+4. Install Playwright browsers:
+   playwright install chromium
+5. Verify installation:
+   python advanced_price_scraper.py --help
+
+SUPPORTED COUNTRIES AND WEBSITES:
+--------------------------------
+US (United States):
+- Amazon (amazon.com)
+- Walmart (walmart.com)
+- Target (target.com)
+- eBay (ebay.com)
+
+IN (India):
+- Amazon (amazon.in)
+- Flipkart (flipkart.com)
+- Myntra (myntra.com)
+- Ajio (ajio.com)
+
+UK (United Kingdom):
+- Amazon (amazon.co.uk)
+- Argos (argos.co.uk)
+- Currys (currys.co.uk)
+
+CA (Canada):
+- Amazon (amazon.ca)
+- Walmart (walmart.ca)
+
+USAGE EXAMPLES:
+---------------
+
+1. Basic Search:
+   python advanced_price_scraper.py --country IN --query "iPhone 15"
+
+2. Search with Headful Mode (see browser):
+   python advanced_price_scraper.py --country IN --query "MacBook Air" --headful
+
+3. Limit Results per Site:
+   python advanced_price_scraper.py --country US --query "Nike Shoes" --max-results 5
+
+4. Re-check Existing Links from JSON File:
+   python advanced_price_scraper.py --country IN --query "Samsung Galaxy" --file previous_results.json
+
+5. Search in Different Countries:
+   python advanced_price_scraper.py --country UK --query "PlayStation 5"
+   python advanced_price_scraper.py --country CA --query "iPhone 15"
+   python advanced_price_scraper.py --country US --query "Nike Air Max"
+
+CLI ARGUMENTS:
+--------------
+--country <country_code>    Required: Country code (US, IN, UK, CA)
+--query <product_name>      Required: Product search query
+--file <path>              Optional: JSON file with previously saved links to re-check
+--headful                  Optional: Run browser with UI (not headless)
+--max-results <number>     Optional: Maximum results per site (default: 10)
+
+OUTPUT FILES:
+-------------
+1. Results JSON: <country>_<query>_results.json
+   Example: IN_iPhone_15_results.json
+
+2. Debug HTML Files: <website>_<query>.html
+   Example: flipkart_iPhone_15.html
+
+3. Log File: price_scraper.log
+   Contains detailed execution logs
+
+JSON FILE FORMAT (for --file input):
+-----------------------------------
+[
+  {
+    "link": "https://www.amazon.in/product-url",
+    "price": "99999",
+    "currency": "INR",
+    "productName": "iPhone 15 Pro Max",
+    "website": "amazon"
+  },
+  {
+    "link": "https://www.flipkart.com/product-url",
+    "price": "89999",
+    "currency": "INR", 
+    "productName": "iPhone 15 Pro",
+    "website": "flipkart"
+  }
+]
+
+STEALTH FEATURES:
+-----------------
+✅ Random user agent rotation
+✅ Random viewport sizes
+✅ Human-like mouse movements
+✅ Random scrolling patterns
+✅ Anti-detection JavaScript injection
+✅ Random delays between requests
+✅ CAPTCHA detection and handling
+✅ Multiple locale support
+
+TROUBLESHOOTING:
+----------------
+1. If you get "Timeout" errors:
+   - Try running with --headful to see what's happening
+   - Use a residential IP address (home internet)
+   - Some sites may block cloud/VPS IPs
+
+2. If no results are found:
+   - Check the generated HTML files for debugging
+   - Try different search terms
+   - Some sites may have changed their selectors
+
+3. If you get CAPTCHA errors:
+   - Wait a few minutes before trying again
+   - Try running from a different IP address
+   - Some sites are more strict than others
+
+4. If Playwright installation fails:
+   - Ensure you have Python 3.8+ installed
+   - Try: pip install --upgrade playwright
+   - Then: playwright install chromium
+
+PERFORMANCE TIPS:
+-----------------
+1. Use --max-results to limit results per site for faster execution
+2. Run in headless mode (default) for better performance
+3. Some sites are slower than others - this is normal
+4. The tool includes random delays to avoid being blocked
+
+SECURITY NOTES:
+---------------
+- The tool respects robots.txt and includes delays
+- It uses stealth features to avoid detection
+- Some sites may still block automated access
+- Always use responsibly and in accordance with site terms
+
+SUPPORTED PRODUCT TYPES:
+------------------------
+✅ Electronics (phones, laptops, tablets)
+✅ Fashion (clothing, shoes, accessories)
+✅ Home & Garden
+✅ Sports & Outdoors
+✅ Books & Media
+✅ And more...
+
+EXAMPLE WORKFLOW:
+-----------------
+1. Search for a product:
+   python advanced_price_scraper.py --country IN --query "iPhone 15"
+
+2. Check the results in the generated JSON file
+
+3. Re-check prices later:
+   python advanced_price_scraper.py --country IN --query "iPhone 15" --file IN_iPhone_15_results.json
+
+4. Compare prices across different countries:
+   python advanced_price_scraper.py --country US --query "iPhone 15"
+   python advanced_price_scraper.py --country UK --query "iPhone 15"
+
+LOG FILES:
+----------
+- price_scraper.log: Detailed execution logs
+- HTML files: Saved page content for debugging
+- JSON results: Structured product data
+
+For more detailed logs, check the price_scraper.log file in the project directory.
+
+ENJOY PRICE COMPARISON SHOPPING! 🛒 
