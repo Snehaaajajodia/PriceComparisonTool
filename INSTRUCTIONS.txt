@@ -1,24 +1,26 @@
 ADVANCED PRICE COMPARISON SCRAPER - INSTRUCTIONS
-==================================================
+
 
 Created by: Sneha Jajodia
 
+
+Demo Video Link: https://drive.google.com/file/d/11wixK1eCf9FobmW3VVEoe_X795ecy6Yk/view?usp=drive_link
+
+
 DESCRIPTION:
------------
 This is an advanced CLI tool that scrapes multiple e-commerce websites for price comparisons
 across different countries. It uses Playwright with stealth features to avoid bot detection
 and provides comprehensive price comparison data.
 
 FEATURES:
----------
-✅ Multi-country support (US, IN, UK, CA)
-✅ Multiple e-commerce sites per country
-✅ Stealth mode with anti-detection features
-✅ JSON file input/output support
-✅ Human-like browsing simulation
-✅ CAPTCHA detection and handling
-✅ Comprehensive logging
-✅ Price sorting and filtering
+Multi-country support (US, IN, UK, CA)
+Multiple e-commerce sites per country
+Stealth mode with anti-detection features
+JSON file input/output support
+Human-like browsing simulation
+CAPTCHA detection and handling
+Comprehensive logging
+Price sorting and filtering
 
 DEPENDENCIES:
 -------------
@@ -123,80 +125,11 @@ JSON FILE FORMAT (for --file input):
 
 STEALTH FEATURES:
 -----------------
-✅ Random user agent rotation
-✅ Random viewport sizes
-✅ Human-like mouse movements
-✅ Random scrolling patterns
-✅ Anti-detection JavaScript injection
-✅ Random delays between requests
-✅ CAPTCHA detection and handling
-✅ Multiple locale support
-
-TROUBLESHOOTING:
-----------------
-1. If you get "Timeout" errors:
-   - Try running with --headful to see what's happening
-   - Use a residential IP address (home internet)
-   - Some sites may block cloud/VPS IPs
-
-2. If no results are found:
-   - Check the generated HTML files for debugging
-   - Try different search terms
-   - Some sites may have changed their selectors
-
-3. If you get CAPTCHA errors:
-   - Wait a few minutes before trying again
-   - Try running from a different IP address
-   - Some sites are more strict than others
-
-4. If Playwright installation fails:
-   - Ensure you have Python 3.8+ installed
-   - Try: pip install --upgrade playwright
-   - Then: playwright install chromium
-
-PERFORMANCE TIPS:
------------------
-1. Use --max-results to limit results per site for faster execution
-2. Run in headless mode (default) for better performance
-3. Some sites are slower than others - this is normal
-4. The tool includes random delays to avoid being blocked
-
-SECURITY NOTES:
----------------
-- The tool respects robots.txt and includes delays
-- It uses stealth features to avoid detection
-- Some sites may still block automated access
-- Always use responsibly and in accordance with site terms
-
-SUPPORTED PRODUCT TYPES:
-------------------------
-✅ Electronics (phones, laptops, tablets)
-✅ Fashion (clothing, shoes, accessories)
-✅ Home & Garden
-✅ Sports & Outdoors
-✅ Books & Media
-✅ And more...
-
-EXAMPLE WORKFLOW:
------------------
-1. Search for a product:
-   python advanced_price_scraper.py --country IN --query "iPhone 15"
-
-2. Check the results in the generated JSON file
-
-3. Re-check prices later:
-   python advanced_price_scraper.py --country IN --query "iPhone 15" --file IN_iPhone_15_results.json
-
-4. Compare prices across different countries:
-   python advanced_price_scraper.py --country US --query "iPhone 15"
-   python advanced_price_scraper.py --country UK --query "iPhone 15"
-
-LOG FILES:
-----------
-- price_scraper.log: Detailed execution logs
-- HTML files: Saved page content for debugging
-- JSON results: Structured product data
-
-For more detailed logs, check the price_scraper.log file in the project directory.
-
-ENJOY PRICE COMPARISON SHOPPING! 🛒 
+Random user agent rotation
+Random viewport sizes
+Human-like mouse movements
+Random scrolling patterns
+Anti-detection JavaScript injection
+Random delays between requests
+CAPTCHA detection and handling
+Multiple locale support
